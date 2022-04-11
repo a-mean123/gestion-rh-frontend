@@ -1,0 +1,48 @@
+<div class="container mt-5">
+
+    <div style="display: flex;justify-content: space-between;">
+
+        <h2>Liste departement</h2>
+
+        <button [routerLink]="['/dashboard/departement/ajout']"  class="btn btn-primary"> Ajouter </button>
+
+    </div>
+
+    <div class="row mt-2">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>etage </th>
+                    <th>salle</th>
+                    <th>option</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let dep of departements">
+                    <td> {{ dep.name }} </td>
+                    <td> {{ dep.description }} </td>
+                    <td> {{ dep.etage }} </td>
+                    <td> {{ dep.salle }} </td>
+                    <td>
+                        <button (click)="delete(dep._id)"  class="btn btn-danger m-1"> delete </button>
+                        <button class="btn btn-info m-1"> update </button>
+
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+
+
+    </div>
+
+
+</div>
