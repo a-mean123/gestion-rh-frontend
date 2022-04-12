@@ -17,6 +17,9 @@ import { ListdepComponent } from './dashboard/departement/listdep/listdep.compon
 import { UpdatedepComponent } from './dashboard/departement/updatedep/updatedep.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AjoutclientComponent } from './dashboard/client/ajoutclient/ajoutclient.component';
+import { ListclientComponent } from './dashboard/client/listclient/listclient.component';
+import { UpdateclientComponent } from './dashboard/client/updateclient/updateclient.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeComponent,
     AjoutComponent,
     ListdepComponent,
-    UpdatedepComponent
+    UpdatedepComponent,
+    AjoutclientComponent,
+    ListclientComponent,
+    UpdateclientComponent
   ],
   imports: [
     BrowserModule,

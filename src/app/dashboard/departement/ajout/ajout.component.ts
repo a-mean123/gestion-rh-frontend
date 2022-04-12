@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DatadepService } from 'src/app/services/datadep.service';
 import Swal from 'sweetalert2'
 
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2'
 })
 export class AjoutComponent implements OnInit {
 
-  constructor(private data: DatadepService) { }
+  constructor(private data: DatadepService, private router: Router) { }
 
   departement = {
 
@@ -33,14 +34,8 @@ export class AjoutComponent implements OnInit {
             timer: 1500
           })
 
-          this.departement = {
-
-            name: '',
-            description: '',
-            etage: '',
-            salle:''
-        
-          }
+          this.router.navigate(['/dashboard/departement/list'])
+    
         }
       );
 

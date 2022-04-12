@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AjoutclientComponent } from './dashboard/client/ajoutclient/ajoutclient.component';
 import { ClientComponent } from './dashboard/client/client.component';
+import { ListclientComponent } from './dashboard/client/listclient/listclient.component';
+import { UpdateclientComponent } from './dashboard/client/updateclient/updateclient.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AjoutComponent } from './dashboard/departement/ajout/ajout.component';
 import { DepartementComponent } from './dashboard/departement/departement.component';
@@ -27,7 +30,13 @@ const routes: Routes = [
     ] },
 
 
-    { path: 'client' , component: ClientComponent },
+    { path: 'client' , component: ClientComponent , children:[
+      { path: '' , redirectTo: 'list' , pathMatch: 'full' },
+      { path: 'ajout', component: AjoutclientComponent },
+      { path: 'list' , component: ListclientComponent },
+      { path: 'update/:id' , component: UpdateclientComponent }
+
+    ] },
 
 
     { path: 'employee' , component: EmployeeComponent  }

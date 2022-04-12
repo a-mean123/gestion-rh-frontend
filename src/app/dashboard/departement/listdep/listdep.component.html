@@ -30,7 +30,7 @@
                     <td> {{ dep.salle }} </td>
                     <td>
                         <button (click)="delete(dep._id)"  class="btn btn-danger m-1"> delete </button>
-                        <button class="btn btn-info m-1"> update </button>
+                        <button  [routerLink]="[ '/dashboard/departement/update' , dep._id ]"  class="btn btn-info m-1"> update </button>
 
                     </td>
                 </tr>
