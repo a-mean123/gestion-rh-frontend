@@ -9,7 +9,10 @@ import { AjoutComponent } from './dashboard/departement/ajout/ajout.component';
 import { DepartementComponent } from './dashboard/departement/departement.component';
 import { ListdepComponent } from './dashboard/departement/listdep/listdep.component';
 import { UpdatedepComponent } from './dashboard/departement/updatedep/updatedep.component';
+import { AjoutemployeeComponent } from './dashboard/employee/ajoutemployee/ajoutemployee.component';
 import { EmployeeComponent } from './dashboard/employee/employee.component';
+import { ListemployeeComponent } from './dashboard/employee/listemployee/listemployee.component';
+import { UpdateemployeeComponent } from './dashboard/employee/updateemployee/updateemployee.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -39,7 +42,14 @@ const routes: Routes = [
     ] },
 
 
-    { path: 'employee' , component: EmployeeComponent  }
+    { path: 'employee' , component: EmployeeComponent , children: [
+
+      { path: '' , redirectTo: 'list', pathMatch: 'full' },
+      { path: 'ajout', component: AjoutemployeeComponent },
+      { path: 'list' , component: ListemployeeComponent },
+      { path: 'update/:id' , component: UpdateemployeeComponent }
+
+    ] }
 
 
   ] },

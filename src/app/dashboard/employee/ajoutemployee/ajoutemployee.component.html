@@ -1,0 +1,32 @@
+
+<div class="container mt-5">
+
+    <h2>Ajouter un Employee</h2>
+
+    <div class="row">
+
+        <div class="col-6 mx-auto">
+
+            <input [(ngModel)]="employee.name" type="text" class="form-control m-2" placeholder="name">
+            <input [(ngModel)]="employee.lastname" type="text" class="form-control m-2" placeholder="lastname">
+
+            <input [(ngModel)]="employee.tel" type="text" class="form-control m-2" placeholder="tel">
+            <input [(ngModel)]="employee.email" type="text" class="form-control m-2" placeholder="email">
+            <input [(ngModel)]="employee.address" type="text" class="form-control m-2" placeholder="address">
+
+            <select [(ngModel)]="employee.idDep" class="form-control m-2">
+
+                <option *ngFor="let item of departements" [value]="item._id"> {{ item.name }} </option>
+             
+            </select>
+
+            <input (change)="select($event)"  type="file" class="form-control m-2" placeholder="image">
+
+            <button (click)="ajout()" class="btn btn-primary form-control m-2">Ajouter</button>
+
+        </div>
+
+
+    </div>
+
+</div>

@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AjoutclientComponent } from './dashboard/client/ajoutclient/ajoutclient.component';
 import { ListclientComponent } from './dashboard/client/listclient/listclient.component';
 import { UpdateclientComponent } from './dashboard/client/updateclient/updateclient.component';
+import { AjoutemployeeComponent } from './dashboard/employee/ajoutemployee/ajoutemployee.component';
+import { ListemployeeComponent } from './dashboard/employee/listemployee/listemployee.component';
+import { UpdateemployeeComponent } from './dashboard/employee/updateemployee/updateemployee.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { UpdateclientComponent } from './dashboard/client/updateclient/updatecli
     UpdatedepComponent,
     AjoutclientComponent,
     ListclientComponent,
-    UpdateclientComponent
+    UpdateclientComponent,
+    AjoutemployeeComponent,
+    ListemployeeComponent,
+    UpdateemployeeComponent
   ],
   imports: [
     BrowserModule,
