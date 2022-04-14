@@ -13,6 +13,7 @@ import { AjoutemployeeComponent } from './dashboard/employee/ajoutemployee/ajout
 import { EmployeeComponent } from './dashboard/employee/employee.component';
 import { ListemployeeComponent } from './dashboard/employee/listemployee/listemployee.component';
 import { UpdateemployeeComponent } from './dashboard/employee/updateemployee/updateemployee.component';
+import { AuthenticationGuard } from './guards/authentication.guard';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -20,7 +21,7 @@ const routes: Routes = [
 
   { path: '' , redirectTo: '/dashboard' , pathMatch: 'full' },
 
-  { path: 'dashboard' , component: DashboardComponent , children: [
+  { path: 'dashboard' , canActivate: [ AuthenticationGuard ] ,component: DashboardComponent , children: [
 
     { path: '' , redirectTo: 'departement' , pathMatch: 'full' },
     { path: 'departement' , component: DepartementComponent , children: [

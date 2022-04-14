@@ -19,6 +19,9 @@ export class ListdepComponent implements OnInit {
       .subscribe(
         res=>{
           this.departements = res;
+        },
+        err=>{
+          
         }
       );
 
